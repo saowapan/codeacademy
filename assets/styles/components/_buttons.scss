@@ -1,0 +1,41 @@
+.button-large {
+	color: white;
+	background-color: $main-color;
+    box-shadow: 0 0.25em 0 0 $top-main-color,0 4px 9px $top-main-color;
+    border-radius: .225em;
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: Oswald,sans-serif;
+}
+input[type=submit].button-large {
+    border-style: inherit;
+}
+.button-large:hover {
+    color: white;
+	text-decoration: none;
+	background-color: $color;
+    box-shadow: 0 0.25em 0 0 #027da3,0 4px 9px $top-main-color;
+}
+.btn-logout a{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid;
+    margin-top: 20px;
+    font-family: "Oswald",sans-serif;
+    &:hover{
+        background-color: white;
+        border-color:white;
+        color: $color;
+    }
+}
+@media (max-width: 768px){
+    .button-large{
+        margin: 10px;
+    }
+}

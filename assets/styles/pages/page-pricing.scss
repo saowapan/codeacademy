@@ -1,0 +1,17 @@
+.section-bottompricing{
+	background-image: url(../../assets/images/web-courses.jpg);
+}
+.pricing-table{
+	tbody{ 
+   	 	tr{
+   	 		@include valueprefixer(display, flex);  
+   	 	}
+   	 	td,th{
+   	 		display: block; 
+   	 		width: 50%;
+   	 	}
+   	 	td:first-child,th:first-child{
+   	 		width: 100%;
+   	 	}
+	}
+}

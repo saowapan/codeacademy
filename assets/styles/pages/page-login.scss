@@ -1,0 +1,38 @@
+.custom-login{
+	form{
+	    text-align: left;
+	    >p{
+	    	margin-bottom : 30px;
+	    	label{
+	    		width: 100%;
+			    font-family: "Oswald",sans-serif;
+			    letter-spacing: 3px;
+			    font-weight: normal;
+	    	}
+	    	input{
+	    		border: none;
+				line-height: 40px;
+				border-radius: 4px;
+				padding: 0 10px;
+				color: #000;
+				letter-spacing: 1px;
+	    	}
+	    	button#wp-submit-1,#submit{
+	    		line-height: 40px;
+				border-radius: 4px;
+				letter-spacing: 1px;
+	    		padding: 5px 30px;
+			    text-transform: uppercase;
+			    font-family: "Oswald",sans-serif;
+			    background-color: $top-main-color;
+			    border: 1px solid $top-main-color;
+			    color: $white-color;
+			    &:hover{
+					border: 1px solid;
+					color: $top-main-color;
+					background-color: $white-color;
+			    }
+	    	}
+	    }
+	}
+}

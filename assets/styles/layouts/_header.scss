@@ -1,0 +1,470 @@
+/* ===== Default Header =====*/
+/* box of text menu top bar */
+.section-header{
+	text-transform: uppercase;
+	font-family: "Oswald",sans-serif;
+	.logo-menu{
+		font-size: 30px;
+    	margin: 15px 0;
+    	@include valueprefixer(display, flex);    
+	    @include prefixer(align-items, center);
+    	.logo-image{
+    		img{
+				float: left;
+				margin-right: 10px;
+    		}
+    	}
+    	.logo-text{
+    		a,a:hover{
+    			color: $white-color;
+    			text-decoration: none;
+    		}
+    		h4.sub-title{
+    			margin-top: 0;
+			    margin-bottom: 5px;
+			    font-size: 22px;
+    		}	
+			h1.main-title{
+				font-size: 30px;
+				margin: 0px;
+			}
+    	}
+	}
+	.menu{
+		ul.main-menu{
+			@include valueprefixer(display, flex);    
+    		@include prefixer(justify-content, flex-end);
+			margin: 37px 0 0;
+			li{
+    			margin: 0 10px;
+				a{
+					color: $white-color;
+					font-size: 18px;
+				    &:hover{
+				    	color: $white-color;
+					    text-decoration: none;
+					    border-bottom: 2px solid;
+				    }
+				}
+				a.login{
+					letter-spacing: 4px;
+				    font-size: 15px;
+				    line-height: 23px;
+				    display: inline-block;
+				    padding: 0px 6px 0 10px;
+				    border: 2px solid $white-color;
+				    &:hover{
+					    background-color: $white-color;
+					    color: #000;
+				    }
+				}
+			}
+			li:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+}
+.page-template-page-about {
+	.menu ul.main-menu li a.about {
+		border-bottom: 2px solid;
+	}
+}
+.page-template-page-courses {
+	.menu ul.main-menu li a.courses {
+		border-bottom: 2px solid;
+	}
+}
+.page-template-page-pricing  {
+	.menu ul.main-menu li a.pricing {
+		border-bottom: 2px solid;
+	}
+}
+.page-template-page-promotions  {
+	.menu ul.main-menu li a.promotions {
+		border-bottom: 2px solid;
+	}
+}
+.page-template-page-contact {
+	.menu ul.main-menu li a.contact {
+		border-bottom: 2px solid;
+	}
+}
+.page-template-page-login {
+	.menu ul.main-menu li a.login {
+		background-color: $white-color;
+		color: #000;
+	}
+	.affix.top-affix .menu ul.main-menu li a.login {
+		border-color: $color;
+		background-color: $color;
+	}
+}
+
+/* sticky */
+.top-affix{
+	position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+.affix.top-affix{
+	position: fixed;
+	background-color: $white-color;
+	box-shadow: 0 1px 3px $main-color-txt;
+	.logo-menu {
+		margin: 10px 0;
+		.logo-text{
+			a,a:hover{
+    			color: $top-main-color;
+    		}
+		}
+		.logo-image {
+			background-image: url(../../assets/images/saowapanlogo.png);
+		    background-repeat: no-repeat;
+			img{
+				opacity: 0;
+			}
+		}
+	}
+	.menu ul.main-menu {
+		li{
+			a{
+				color: $top-main-color;
+				&:hover{
+					color: $color;
+				}
+			}
+			a.login{
+				border-color: $top-main-color;
+			    background-color: $top-main-color;
+			    color: $white-color;
+			    &:hover{
+			    	border-color: $color;
+			    	background-color: $color;
+			    }
+			}
+		}
+	}
+	#lang_sel {
+		top: 20px;
+	}	
+}
+/* 404 page */
+.sidebar-primary {
+	.top-affix{
+		background-color: $top-main-color;
+		position: relative;
+	}
+	.affix.top-affix{
+		background-color: $white-color;
+		position: fixed;
+	}
+}
+
+/* box of iamges */ 
+main.main>.header-info.home {
+	position: absolute;
+	top: 0;
+	padding-bottom: 60px;
+	padding-top:90px;
+	background:none;
+	.main-text{
+		font-family: "Oswald",sans-serif;
+		color: white;
+		padding-top: 180px;
+		h1{
+			padding-bottom: 20px;
+    		font-size: 70px;
+    		margin: 0px;
+		}
+		p,a,a:hover{
+			color: $white-color;
+		}
+	}
+}
+main.main>.header-info{
+	padding-bottom: 60px;
+	padding-top:90px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../../assets/images/main.jpg);
+	.main-text{
+		font-family: "Oswald",sans-serif;
+		color: white;
+		padding-top: 180px;
+		h1{
+			padding-bottom: 20px;
+    		font-size: 70px;
+    		line-height: 90px;
+    		margin: 0px;
+		}
+		p,a,a:hover{
+			color: $white-color;
+		}
+	}
+}
+main.main>.header-info.section-header-courses{
+	background-image: url(../../assets/images/courses.jpg);
+}
+main.main>.header-info.section-header-contact {
+	background-image: url(../../assets/images/contact.jpg);
+}
+main.main>.header-info.section-header-pricing {
+	background-image: url(../../assets/images/pricing.jpg);
+}
+/* Language */
+header {
+	.container-fluid>.container>.flex{
+		position: relative;
+	}
+	#lang_sel {
+		    display: block;
+		    height: auto;
+		    overflow: hidden;
+		    position: absolute;
+		    top: 30px;
+		    right: 15px;
+		>ul>li{
+			@include valueprefixer(display, flex); 
+		}
+		ul{
+			li{
+				width: auto;
+				a.lang_sel_sel{
+					background: none;
+	    			border: none;
+	    			opacity: 1;
+
+				}
+				a{
+					opacity: 0.5;
+					background: none;
+	    			border: none;
+	    			padding: 0;
+    				line-height: 100%;
+	    			&:hover{
+	    				opacity: 1;
+	    			}
+					span{
+	    				display: none;
+	    			}
+	    			img.iclflag{
+	    				top: 0;
+	    			}
+				}
+			}
+			ul{
+				visibility: visible;
+			    border: none;
+			    position: relative;
+			    width: auto;
+			    top: auto;
+			    left: auto;
+			    height: auto;
+    			overflow: hidden;
+    			padding: 0 !important;
+			    li{
+			    	a:hover{
+			    		background: none;
+			    	}
+			    }
+			}
+		}	
+	}
+}
+
+
+/* 1200px */
+@media (max-width: 1200px){
+	.section-header {
+		.logo-menu {
+			.logo-text{ 
+				h4.sub-title{
+					font-size: 18px;
+				}
+				h1.main-title{
+					font-size: 25px;
+				}
+			}	
+		}
+	}
+}
+@media (max-width: 1200px){
+	main.main>.header-info.home {
+		.main-text{
+			padding-top: 120px;
+		}
+	}	
+}
+@media (max-width: 992px){
+	.section-header {
+		.logo-menu {
+			margin: 10px 0;
+		}
+	}
+	.section-header{ 
+		.menu {
+			ul.main-menu {
+			    margin: 0 0 10px;
+			    @include prefixer(justify-content, flex-start);
+				li{
+					float: left;
+					a{
+						font-size: 16px;
+					}
+				}
+				li:first-child{
+    				margin-left: 0;
+				}
+				li:last-child{
+					margin-right: 10px;
+				}
+			}
+		}				
+	}
+	header{
+		#lang_sel {
+			top:20px;
+		}
+	}	
+}
+@media (max-width: 992px){
+	main.main>.header-info.home {
+		.main-text{
+			padding-top: 70px;
+			h1{
+				font-size: 40px;
+			}
+		}
+	}	
+}
+@media (max-width: 768px){
+	/* box of iamges */ 
+	main.main>.header-info.home {
+		padding-bottom: 20px;
+    	padding-top: 20px;
+		.main-text{
+			padding-top: 50px;
+			h1{
+	    		font-size: 27px;
+			}
+		}
+	}
+	main.main>.header-info {
+		padding-bottom: 20px;
+    	padding-top: 20px;
+		.main-text{
+			padding-top: 20px;
+			h1{
+	    		font-size: 27px;
+			}
+		}
+	}
+}
+@media (max-width: 768px){
+	.top-affix{
+		position: relative;
+	}
+	/* Language */
+	header {
+		#lang_sel {
+			top: 10px;
+    		right: 11px;
+		}
+	}	
+	/*sticky*/
+	.affix.top-affix {
+		.logo-menu {
+			.logo-image {
+			    background-size: 50px;
+				img{
+					width: 50px;
+				}
+			}
+		}
+		.navbar-toggle{
+			color: $top-main-color;
+		}
+		#lang_sel {
+			top: 10px;
+		}
+	}
+	/* header logo */		
+	.section-header {
+		.logo-menu {
+			.logo-image {
+				background-image: url(../../assets/images/saowapanlogo.png);
+				background-size: 50px;
+				background-repeat: no-repeat;
+				img{ 
+					width: 50px;
+					opacity: 0;
+				}
+			}
+			.logo-text{
+				a,a:hover{
+					color: $top-main-color;
+				}
+				h4.sub-title{
+					font-size: 16px;
+	   	 			margin: 0;
+				}
+				h1.main-title{
+					font-size: 20px;
+				}
+			}
+		}
+		button.navbar-toggle{
+			color: $top-main-color;
+			border: none;
+		    border-radius: 0;
+		    margin: 0;
+		    padding: 0;
+		    position: absolute;
+		    right: 15px;
+		    top: 30px;
+		}
+	}
+	/* header menu */	
+	.section-header {
+		.menu {
+			ul.main-menu {
+				li{
+					float: none;
+				    margin: 10px 0;
+				    a,a:hover{
+				    	color: $top-main-color;
+				    }
+				    a.login,a.login:hover{
+						border-color: $top-main-color;
+				    	background-color: $top-main-color;
+				    	color: $white-color;
+					}
+					a.login:hover{
+						opacity: 0.8;
+					}
+				}
+			}
+		}			
+	}
+	#menu-main-navigation.navbar-collapse{
+		border: none;
+    	box-shadow: none;
+	}
+
+}
+@media (max-width: 600px){
+	.affix.top-affix {
+		top: 0;
+	}
+	/* box of iamges */ 
+	main.main>.header-info.home {
+		.main-text{
+			padding-top: 20px; 
+		}
+		.header-info-buttons {
+			display: none;
+		}
+	}
+}

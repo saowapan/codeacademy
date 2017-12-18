@@ -1,0 +1,146 @@
+/* all page */
+.section-wrap{
+    overflow: hidden;
+    .section-content{
+        overflow: hidden;
+        .section-content{
+            padding: 0;
+        }
+    }
+}
+main.main>section , .single section{
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+p{
+    font-size: 18px;
+    color: $main-color-txt;
+    font-family: "Droid Serif",serif;
+}
+a{
+    color: $bg-color;
+    &:hover{
+        color: $color;
+        text-decoration: none;
+    }
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-image: url(../../assets/images/down.png)!important;
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+}
+@mixin prefixer($attr, $value) {
+  	-webkit-#{$attr}: $value;
+  	#{$attr}: $value;
+  	-ms-#{$attr}: $value;
+}
+
+@mixin valueprefixer($attr, $value) {
+  	#{$attr}: $value;
+  	#{$attr}: -webkit-#{$value};
+  	#{$attr}: -ms-#{$value};
+}
+
+.flex{
+    @include valueprefixer(display, flex);    
+    @include prefixer(justify-content, center);
+    @include prefixer(align-items, center);
+}
+
+.flex-left{
+    @include valueprefixer(display, flex);    
+    @include prefixer(justify-content, flex-start);
+    @include prefixer(align-items, center);
+}
+
+
+.break-word{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+}
+.text-title{
+    font-family: "Oswald",sans-serif;
+    margin: 0;
+    padding: 0 0 50px;;
+    color: $top-main-color;
+    font-size: 40px;
+}
+.navbar-collapse{
+  padding: 0 !important;
+}
+
+.admin-bar .right-affix.affix{
+    top: 120px;
+}
+.right-affix.affix{
+    z-index: 2;
+    width: 360px;
+    top: 90px;
+}
+
+/* input */
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+} 
+
+
+@media (max-width: 1200px){
+    .right-affix.affix{
+        width: 293px;
+    }
+}
+@media (max-width: 992px){
+    .right-affix.affix{
+        width: 282px;
+    }
+	.flex-col-sm{
+		@include prefixer(flex-direction, column);
+	}
+    .block-sm{
+        display: block;
+    }
+}
+@media (max-width: 768px){
+    p {
+        font-size: 16px;
+    }
+    .admin-bar .right-affix.affix{
+        top: 0;
+    }
+    .right-affix.affix{
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    .flex-col-xs{
+        @include prefixer(flex-direction, column);
+    }
+    main.main > section, .single section{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .text-title{
+        padding-bottom: 20px;
+        font-size: 30px; 
+    }
+    .block-xs{
+        display: block;
+    }
+}
+
+
+

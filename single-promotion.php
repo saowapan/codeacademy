@@ -1,0 +1,1 @@
+<?php get_template_part('templates/content-singlepromotion', get_post_type()); ?>

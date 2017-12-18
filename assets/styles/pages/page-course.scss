@@ -1,0 +1,41 @@
+/* code by new */
+.section-courses{
+	.items-courses{
+		.content{
+			display: none;
+		}
+		.content.active{
+			display: block;
+			overflow: hidden;
+		}
+	}
+}	
+	
+main.main>section.professional {
+	background-image: url(../../assets/images/web-courses.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    padding: 0;
+    .container-fluid {
+    	padding-top: 100px;
+    	padding-bottom: 100px;
+    	background-color: $main-color;
+    	opacity: 0.4;
+    }
+	h2,p{
+		color: $white-color;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+ 	.professional {
+ 		text-align: center;
+ 	}
+ 	main.main > section.professional {
+ 		.container-fluid{
+ 			padding-top: 40px;
+ 			padding-bottom: 40px; 
+ 		}
+ 	}	
+}
